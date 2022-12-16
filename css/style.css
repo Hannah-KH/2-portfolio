@@ -1,0 +1,230 @@
+:root {
+  --dark: #28303D;
+  --light: #D0D8D8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+  background-color: var(--dark);
+  font: var(--light);
+  font-size: 1.75rem;
+  line-height: 1.5;
+  display: grid;
+  height: 1000px;
+  grid-template-rows: 2fr 1fr 1fr 4fr 1fr 5fr 3fr 3fr 3fr 3fr 1fr 3fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  "header"
+  "hero-banner"
+  "About"
+  "section1" /* This is not working yet. */
+  "work"
+  "Big"
+  "item1"
+  "item2"
+  "item3"
+  "item4"
+  "contact"
+  "details"
+  ;
+}
+
+.page-title {
+  background-color: var(--light);
+  font: var(--dark);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 2rem;
+  float: left;
+  padding: 0px 10px;
+}
+
+nav {
+  font: var(--light);
+  float: right;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: right;
+  width: 50%;
+  position: absolute;
+  right: 15px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 25px;
+  text-decoration: underline;
+}
+
+a {
+  color: var(--light);
+  text-decoration: none;
+}
+
+.hero-banner {
+    background-image: url("../images/02-hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.heroheader {
+  background-color: var(--light);
+  font: var(--dark);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1rem;
+  float: right;
+  padding: 10px;
+}
+
+.About, .Work, .Contact {
+  background-color: var(--light);
+  font: var(--dark);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.5rem;
+  float: left;
+  padding: 0px 10px;
+  width: 100%;
+}
+
+.abouttext {
+  font: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1rem;
+  padding: 10px;
+  grid-area: "abouttext";
+}
+
+.me {
+  grid-area: "me";
+}
+/*
+.me {
+  background-repeat: no-repeat;
+}
+
+.Big {
+  background-image: url("../images/refactor.png");
+}
+
+.item1 {
+  background-image: url("../images/prework.png");
+}
+
+.item2 {
+  background-image: url("../images/02-portfolio-1.jpg");
+}
+
+.item3 {
+  background-image: url("../images/02-portfolio-2.jpg");
+}
+
+.item4 {
+  background-image: url("../images/02-portfolio-3.jpg");
+}
+*/
+
+.label {
+  background-color: var(--light);
+  font: var(--dark);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1rem;
+  float: left;
+  
+}
+
+
+/*
+.details {
+  font: var(--light);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.details ul {
+  list-style-type: none;
+  text-align: center;
+  width: 80%;
+  position: absolute;
+}
+
+.details ul li {
+  display: inline-block;
+  text-decoration: underline;
+}
+*/
+/*
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.625rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.5rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin: 1rem;;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.page-wrapper {
+  display: grid;
+  grid-template-rows: 1fr 4fr 4fr 1fr 5fr 3fr 3fr 3fr 3fr 1fr 2fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  "About",
+  "abouttext",
+  "me",
+  "Work",
+  "Big",
+  "1",
+  "2",
+  "3",
+  "4",
+  "Contact"
+  "details"
+  ;
+}
+
+
+
+.big {
+  background-image: url("../images/refactor.png");
+}
