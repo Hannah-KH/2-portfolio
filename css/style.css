@@ -109,21 +109,18 @@ a {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr;
-  grid-template-areas: "me abouttext";
+  grid-template-areas: 
+  "left right";
 }
 */
-
 .abouttext {
   font: white;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 1rem;
   padding: 10px;
-  grid-area: "abouttext";
 }
 
-.me {
-  grid-area: "me";
-}
+
 
 /* Work example labels */
 
@@ -133,7 +130,9 @@ a {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 1rem;
   float: left;
-  
+  position: relative;
+  margin-top: -50px;
+  padding: 0px 10px;
 }
 
 /* Contact me content */
@@ -152,10 +151,11 @@ a {
 
 .details1 ul li, .details2 ul li {
   display: inline-block;
-  text-decoration: underline;
   padding: 10px;
-  justify-content: center;
 }
 
 
+.link {
+  text-decoration: underline;
+}
 
