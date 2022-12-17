@@ -24,7 +24,7 @@ body {
   "header"
   "hero-banner"
   "About"
-  "section1" /* This is not working yet. */
+  "section1" 
   "work"
   "Big"
   "item1"
@@ -103,18 +103,23 @@ a {
   width: 100%;
 }
 
-/* About me section - not working 
+/* About me section */
 
-.aboutsection {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: 
-  "me abouttext";
-}
-*/
+.page-section1 {
+    display: grid;
+  }
+
+  .aboutsection {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "me abouttext";
+  }
+
 .me {
   grid-area: "me";
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
 .abouttext {
@@ -124,8 +129,6 @@ a {
   font-size: 1rem;
   padding: 10px;
 }
-
-
 
 /* Work example labels */
 
@@ -159,12 +162,35 @@ a {
   padding: 10px;
 }
 
-
 .link {
   text-decoration: underline;
 }
+
+.page-section3 {
+  display: grid;
+}
+
+.details {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "details1 details2";
+}
+
+.details1 {
+  grid-area: "details1";
+  margin-left: 25px;
+}
+
+.details2 {
+  grid-area: "details2";
+  margin-left: 25px;
+}
+
 /* Responsive elements for desktop */
-@media screen and (min-width: 1024px) {
+
+@media screen and (min-width: 768px) {
+  /* Work examples */
   .items {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -189,7 +215,7 @@ a {
     grid-area: "item4";
     margin-left: 5px;
   }
-  /*
+  /* Contact details */
   .details {
     display: grid;
     grid-template-columns: 1fr;
@@ -201,5 +227,10 @@ a {
   }
   .details2 {
     grid-area: "details2";
-  }*/
+  }
+
+  .details1 ul li, .details2 ul li{
+    display: inline;
+  }
+  
 }
