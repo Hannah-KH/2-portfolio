@@ -24,14 +24,14 @@ body {
   "header"
   "hero-banner"
   "About"
-  "section1" 
-  "work"
+  "aboutsection" 
+  "Work"
   "Big"
   "item1"
   "item2"
   "item3"
   "item4"
-  "contact"
+  "Contact"
   "details"
   ;
 }
@@ -112,7 +112,7 @@ a {
   .aboutsection {
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 9fr;
     grid-template-areas: "me abouttext";
   }
 
@@ -154,7 +154,6 @@ a {
 
 .details1 ul, .details2 ul {
   list-style-type: none;
-  width: 90%;
 }
 
 .details1 ul li, .details2 ul li {
@@ -179,17 +178,68 @@ a {
 
 .details1 {
   grid-area: "details1";
-  margin-left: 25px;
+  margin: 0px 25px;
 }
 
 .details2 {
   grid-area: "details2";
-  margin-left: 25px;
+  margin: 0px 25px;
 }
 
 /* Responsive elements for desktop */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) { 
+  /* Section headings no longer full width */
+  .About, .Work, .Contact {
+    background-color: var(--light);
+    font: var(--dark);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.5rem;
+    float: left;
+    padding: 0px 10px;
+  }
+
+  .page-wrapper {
+    display: grid;
+  }
+
+  /* About section */
+  .page-section1 {
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "About aboutsection"
+  }
+
+  .me {
+    grid-area: "me";
+  margin: 25px 25px;
+  }
+
+  .abouttext {
+    grid-area: "abouttext";
+    font: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1rem;
+    padding: 10px;
+    margin-top: 25px;
+  }
+
+  /* Work section */
+
+  .page-section2 {
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "Work examples";
+  }
+
+  .examples {
+    margin: 10px 10px;
+  }
+
   /* Work examples */
   .items {
     display: grid;
@@ -215,7 +265,34 @@ a {
     grid-area: "item4";
     margin-left: 5px;
   }
+
+
   /* Contact details */
+
+  .page-section3 {
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "Contact details"
+  }
+/*
+  .page-section3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "details";
+  }
+*/
+  .details {
+    grid-area: "details";
+  }
+
+  .details1 ul li, .details2 ul li{
+    display: inline;
+  }
+
+  /*
   .details {
     display: grid;
     grid-template-columns: 1fr;
@@ -232,5 +309,5 @@ a {
   .details1 ul li, .details2 ul li{
     display: inline;
   }
-  
+  */
 }
