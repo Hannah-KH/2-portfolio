@@ -36,6 +36,16 @@ body {
   ;
 }
 
+h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+section {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 /* My name */
 .page-title {
   background-color: var(--light);
@@ -88,7 +98,8 @@ a {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 1rem;
   float: right;
-  padding: 0px 5px;
+  padding: 0 5px;
+  margin: 15px 0;
 }
 
 /* Section headings */
@@ -101,20 +112,21 @@ a {
   float: left;
   padding: 0px 10px;
   width: 100%;
+  margin-bottom: 12px;
 }
 
 /* About me section */
 
 .page-section1 {
-    display: grid;
-  }
+  display: grid;
+}
 
-  .aboutsection {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 9fr;
-    grid-template-areas: "me abouttext";
-  }
+.aboutsection {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 9fr;
+  grid-template-areas: "me abouttext";
+}
 
 .me {
   grid-area: "me";
@@ -144,47 +156,30 @@ a {
 }
 
 /* Contact me content */
+.page-section3 {
+  display: grid;
+  grid-template-columns: 1fr ;
+  grid-template-rows: 1fr;
+  grid-template-areas: "details";
+}
 
-.details1, .details2 {
+.details {
   font: var(--light);
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 1rem;
   margin-top: 5px;
-}
-
-.details1 ul, .details2 ul {
-  list-style-type: none;
-}
-
-.details1 ul li, .details2 ul li {
-  display: inline-block;
-  padding: 10px;
+  grid-area: "details";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .link {
   text-decoration: underline;
 }
 
-.page-section3 {
-  display: grid;
-}
 
-.details {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "details1 details2";
-}
 
-.details1 {
-  grid-area: "details1";
-  margin: 0px 25px;
-}
-
-.details2 {
-  grid-area: "details2";
-  margin: 0px 25px;
-}
 
 /* Responsive elements for desktop */
 
@@ -214,7 +209,7 @@ a {
 
   .me {
     grid-area: "me";
-  margin: 25px 25px;
+    margin: 25px 25px;
   }
 
   .abouttext {
@@ -237,7 +232,7 @@ a {
   }
 
   .examples {
-    margin: 10px 10px;
+    margin: 0 10px;
   }
 
   /* Work examples */
@@ -250,19 +245,19 @@ a {
     "item3 item4";
   }
   .item1 {
-    grid-area: "item1";
+    grid-area: item1;
     margin-right: 5px;
   }
   .item2 {
-    grid-area: "item2";
+    grid-area: item2;
     margin-left: 5px;
   }
   .item3 {
-    grid-area: "item3";
+    grid-area: item3;
     margin-right: 5px;
   }
   .item4 {
-    grid-area: "item4";
+    grid-area: item4;
     margin-left: 5px;
   }
 
@@ -276,38 +271,23 @@ a {
     grid-template-areas: 
     "Contact details"
   }
-/*
-  .page-section3 {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "details";
+
+  .Contact {
+    grid-area: Contact;
   }
-*/
+
   .details {
-    grid-area: "details";
+    grid-area: details;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: -10px;
   }
 
-  .details1 ul li, .details2 ul li{
-    display: inline;
+  .details a {
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-evenly;
   }
 
-  /*
-  .details {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "details1 details2";
-  }
-  .details1 {
-    grid-area: "details1";
-  }
-  .details2 {
-    grid-area: "details2";
-  }
-
-  .details1 ul li, .details2 ul li{
-    display: inline;
-  }
-  */
 }
