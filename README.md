@@ -15,11 +15,12 @@ N/A
 
 ## Usage
 
-[Link to deployed application.]
+![Deployed application](https://hannah-kh.github.io/2-portfolio/).
 
 If you inspect the page you can view the HTML and CSS and see how it works.
 
-![Screenshot of deployed page.](images/DeployedScreenshot.png)
+![Screenshot of deployed page.](images/DesktopView.png)
+![Screenshot of deployed page.](images/MobileView.png)
 
 ## Credits
 
